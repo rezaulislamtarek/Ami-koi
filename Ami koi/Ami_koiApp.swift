@@ -9,11 +9,10 @@ import SwiftUI
 
 @main
 struct Ami_koiApp: App {
-    @StateObject private var locationRoot : LocationRoot = LocationRoot()
+  
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(locationRoot)
         }
     }
 }
