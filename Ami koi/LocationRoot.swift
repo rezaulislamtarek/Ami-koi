@@ -12,12 +12,27 @@ class LocationRoot : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private let locationManager = CLLocationManager()
     @Published var locationStatus : CLAuthorizationStatus?
-    @Published var lastLocation : CLLocation?
+    @Published var address : String?
+    
+    @Published var lastLocation : CLLocation? = .none {
+        didSet{
+            DispatchQueue.main.async { [weak self] in
+                Task{
+                    if let self {
+                        self.address = try await LocationUtils.getAddressFromCoordinates(location: (self.lastLocation!))
+                    }
+                }
+            }
+        }
+    }
+    
     
     override init() {
         super.init()
         
     }
+    
+
     
     func useLocation(){
         locationManager.delegate =  self

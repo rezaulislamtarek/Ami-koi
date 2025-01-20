@@ -8,18 +8,45 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject private var location : LocationRoot 
+    @StateObject private var location : LocationRoot = LocationRoot()
+    private var quoteProvider = QuoteProvider()
+    
     var body: some View {
         VStack(spacing : 48){
             VStack {
-                Text("My location \(location.lastLocation?.coordinate.latitude ?? 0)")
-                Text("Permission status: \(location.statusString)")
+                VStack(alignment: .leading ){
+                    Text("Hi Reza,")
+                    Text(TimeOfDayGreetings.getGreeting().rawValue)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                Spacer()
+                
+                if let  address = location.address {
+                    Text("I am at \(address)")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                }
+                
+                VStack(spacing : 16){
+                    Text("\(quoteProvider.getRandomQuote(for: .getGreeting())!)")
+                    Image(systemName: "quote.opening")
+                }
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding()
+                .background(.green.opacity(0.05))
+                .cornerRadius(24)
+                Spacer()
                 Button(action: {
                     location.useLocation()
                 }, label: {
-                    Text("Ami koi?")
+                    Text("Where am I?")
+                        .frame(maxWidth: .infinity)
+                        .padding()
                 })
                 .buttonStyle(.bordered)
+                .padding()
             }
         }
     }
