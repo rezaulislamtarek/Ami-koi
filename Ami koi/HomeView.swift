@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     private var quoteProvider = QuoteProvider()
+    @State private var quoteRenderToggle : Bool = false
     
     var body: some View {
         VStack(spacing : 48){
@@ -28,16 +29,28 @@ struct HomeView: View {
                 
                 
                 VStack(spacing : 16){
-                    Text("\(quoteProvider.getRandomQuote(for: .getGreeting())!)")
+                    if quoteRenderToggle{
+                        Text("\(quoteProvider.getRandomQuote(for: .getGreeting())!)")
+                    }else{
+                        Text("\(quoteProvider.getRandomQuote(for: .getGreeting())!)")
+                    }
                     Image(systemName: "quote.opening")
                 }
+                .foregroundStyle(.white)
                 .multilineTextAlignment(.center)
                 .font(.system(.title2, design: .rounded))
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding()
                 .padding(.vertical, 44)
-                .background(.green.opacity(0.05))
+                .background(
+                    LinearGradient(colors: [.green.opacity(1), .blue.opacity(0.9)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                )
                 .cornerRadius(24)
+                .onTapGesture {
+                    withAnimation {
+                        quoteRenderToggle.toggle()
+                    }
+                }
                 Spacer()
                 
             }
