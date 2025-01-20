@@ -13,6 +13,7 @@
 		0B0732B72D3DE499008EAE7B /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B0732B62D3DE499008EAE7B /* quotes.json */; };
 		0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0732B92D3DE4D7008EAE7B /* Quotes.swift */; };
 		0B0732BC2D3DE50B008EAE7B /* QuoteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0732BB2D3DE50B008EAE7B /* QuoteProvider.swift */; };
+		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
 		0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */; };
 		0BFDEF8D2D3D55E100ABF97D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8C2D3D55E100ABF97D /* ContentView.swift */; };
 		0BFDEF8F2D3D55E200ABF97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		0B0732B62D3DE499008EAE7B /* quotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
 		0B0732B92D3DE4D7008EAE7B /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		0B0732BB2D3DE50B008EAE7B /* QuoteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProvider.swift; sourceTree = "<group>"; };
+		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		0BFDEF872D3D55E100ABF97D /* Ami koi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ami koi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ami_koiApp.swift; sourceTree = "<group>"; };
 		0BFDEF8C2D3D55E100ABF97D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0BD2FC8B2D3E8E41005E07BF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0BFDEF7E2D3D55E100ABF97D = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		0BFDEF892D3D55E100ABF97D /* Ami koi */ = {
 			isa = PBXGroup;
 			children = (
+				0BD2FC8B2D3E8E41005E07BF /* Components */,
 				0B0732B82D3DE4C7008EAE7B /* Models */,
 				0B0732B52D3DE483008EAE7B /* Resources */,
 				0B0732B22D3DE1F4008EAE7B /* Enum */,
@@ -210,6 +221,7 @@
 				0BFDEF9B2D3D615500ABF97D /* HomeView.swift in Sources */,
 				0BFDEF992D3D5D3C00ABF97D /* LocationRoot.swift in Sources */,
 				0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */,
+				0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */,
 				0B0732BC2D3DE50B008EAE7B /* QuoteProvider.swift in Sources */,
 				0B0732AE2D3DD677008EAE7B /* CLPlacemark+Extension.swift in Sources */,
 				0B0732B42D3DE20F008EAE7B /* TimeOfDayGreetings.swift in Sources */,

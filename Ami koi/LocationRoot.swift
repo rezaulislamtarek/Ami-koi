@@ -20,6 +20,7 @@ class LocationRoot : NSObject, ObservableObject, CLLocationManagerDelegate {
                 Task{
                     if let self {
                         self.address = try await LocationUtils.getAddressFromCoordinates(location: (self.lastLocation!))
+                        self.stopLocationUpdate()
                     }
                 }
             }
@@ -39,6 +40,11 @@ class LocationRoot : NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    func stopLocationUpdate(){
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
     }
     
     var statusString : String{
