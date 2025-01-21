@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct Ami_koiApp: App {
+    @StateObject private  var router : Router = Router()
   
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouteHandler()
+                .environmentObject(router)
         }
     }
 }
