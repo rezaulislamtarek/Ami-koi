@@ -8,11 +8,60 @@
 import SwiftUI
 
 struct MapSelectionView: View {
+    @StateObject private var locationManager : LocationManager = LocationManager()
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+                    Map(
+                        coordinateRegion: $locationManager.region,
+                        interactionModes: [.all]
+                    )
+                    .frame(height: 400)
+                    
+                    Text("আপনার বর্তমান লোকেশন:")
+                        .font(.headline)
+                        .padding()
+                    
+                    Text("Latitude: \(locationManager.region.center.latitude)")
+                    Text("Longitude: \(locationManager.region.center.longitude)")
+                }
+        
     }
 }
 
 #Preview {
     MapSelectionView()
+}
+
+
+import SwiftUI
+import MapKit
+import CoreLocation
+
+class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+    private let locationManager = CLLocationManager()
+    
+    @Published var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), // ডিফল্ট লোকেশন
+        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+    )
+    
+    override init() {
+        super.init()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization() // অনুমতি চাইবে
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last {
+            DispatchQueue.main.async {
+                self.region = MKCoordinateRegion(
+                    center: location.coordinate,
+                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+                )
+            }
+        }
+    }
 }

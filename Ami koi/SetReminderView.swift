@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SetReminderView: View {
+    @EnvironmentObject private var router : Router
     @State private var details : String = ""
     private var corneerRadious : CGFloat = 16
     var body: some View {
@@ -15,7 +16,9 @@ struct SetReminderView: View {
             
                 VStack {
                    
-                    Button(action: {}, label: {
+                    Button(action: {
+                        router.presentSheet(destination: Route.mapSelectionView)
+                    }, label: {
                         VStack(alignment: .leading){
                             HStack{
                                 Text("Pick a location")

@@ -71,7 +71,7 @@ struct WhereAmIView: View {
             .cornerRadius(25)
              
             Button(action: {
-                location.useLocation()
+                location.fetchLocation()
             }, label: {
                 GradientText(text: "Where am I?", gradientColors: [.green, .blue], font: .system(.title2, design: .rounded), fontWeight: .bold)
                     .frame(maxWidth: .infinity)

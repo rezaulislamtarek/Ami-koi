@@ -35,7 +35,7 @@ class LocationRoot : NSObject, ObservableObject, CLLocationManagerDelegate {
     
 
     
-    func useLocation(){
+    func fetchLocation(){
         locationManager.delegate =  self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()

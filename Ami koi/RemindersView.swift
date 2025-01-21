@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RemindersView: View {
     @EnvironmentObject private var route : Router
+
     private let cornerRadious : CGFloat = 16
     var body: some View {
         VStack{

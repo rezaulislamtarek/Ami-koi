@@ -18,6 +18,7 @@
 		0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDD2D3F270600A37C15 /* RouteHandler.swift */; };
 		0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */; };
 		0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */; };
+		0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */; };
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
@@ -41,6 +42,7 @@
 		0B348CDD2D3F270600A37C15 /* RouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteHandler.swift; sourceTree = "<group>"; };
 		0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
 		0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
+		0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRoot.swift; sourceTree = "<group>"; };
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */,
 				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
 				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
+				0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */,
 			);
 			path = "Ami koi";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */,
 				0B0732B12D3DD828008EAE7B /* LocationUtils.swift in Sources */,
 				0BFDEF8D2D3D55E100ABF97D /* ContentView.swift in Sources */,
+				0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */,
 				0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */,
 				0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */,
 				0BFDEF9B2D3D615500ABF97D /* HomeView.swift in Sources */,
