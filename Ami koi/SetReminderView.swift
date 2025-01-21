@@ -29,7 +29,7 @@ struct SetReminderView: View {
                         }
                         .foregroundStyle(.white)
                         .padding()
-                        .gradientBackground([.green, .blue.opacity(0.8)])
+                        .gradientBackground([.green, .blue.opacity(0.5)])
                     .cornerRadius(corneerRadious)
                     })
                     .tint(.primary)
