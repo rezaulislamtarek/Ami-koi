@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @EnvironmentObject private var router : Router
     
     var body: some View {
         VStack(spacing : 48){
             VStack {
-                GreetingView()
+                HStack {
+                    GreetingView()
+                    Image(systemName: "lightbulb.max")
+                        .resizable()
+                        .foregroundStyle(.white)
+                        .scaledToFit()
+                        .frame(width: 30)
+                        .padding(10)
+                        .gradientBackground()
+                        .cornerRadius(16)
+                        .onTapGesture {
+                            router.navigate(to: Route.reminderListView)
+                        }
+                    
+                }
                 Spacer()
                 QuoteView()
                 Spacer()
@@ -27,7 +41,6 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
-        
 }
 
 struct WhereAmIView: View {
