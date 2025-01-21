@@ -9,9 +9,9 @@ import SwiftUI
 
 struct GradientText: View {
     var text: String
-    var gradientColors: [Color]
-    var font: Font
-    var fontWeight: Font.Weight
+    var gradientColors: [Color] = [.green, .blue]
+    var font: Font = .title2
+    var fontWeight: Font.Weight = .bold
     
     var body: some View {
         Text(text)
