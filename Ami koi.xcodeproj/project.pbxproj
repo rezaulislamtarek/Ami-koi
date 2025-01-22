@@ -19,6 +19,7 @@
 		0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */; };
 		0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */; };
 		0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */; };
+		0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB71F9B2D4084570054E85C /* LocationManager.swift */; };
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
@@ -43,6 +44,7 @@
 		0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
 		0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRoot.swift; sourceTree = "<group>"; };
+		0BB71F9B2D4084570054E85C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
 				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
 				0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */,
+				0BB71F9B2D4084570054E85C /* LocationManager.swift */,
 			);
 			path = "Ami koi";
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */,
 				0B0732AE2D3DD677008EAE7B /* CLPlacemark+Extension.swift in Sources */,
 				0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */,
+				0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */,
 				0B0732B42D3DE20F008EAE7B /* TimeOfDayGreetings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,11 +406,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ami-koi-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = AroundTask;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,11 +438,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ami-koi-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = AroundTask;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

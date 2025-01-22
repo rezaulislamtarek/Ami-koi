@@ -4,64 +4,76 @@
 //
 //  Created by Rezaul Islam on 21/1/25.
 //
-
 import SwiftUI
+import MapKit
 
 struct MapSelectionView: View {
-    @StateObject private var locationManager : LocationManager = LocationManager()
+    @StateObject private var locationManager = LocationManager()
+    @State private var selectedLocation: IdentifiableLocation? // নতুন টাইপ ব্যবহার
+    @State private var address : String = ""
+    private let cornerRadious : CGFloat = 16
+    
+    var location : (CLLocation) -> Void
+    
     var body: some View {
-        
-        VStack {
-                    Map(
-                        coordinateRegion: $locationManager.region,
-                        interactionModes: [.all]
-                    )
-                    .frame(height: 400)
+        VStack(alignment: .leading, spacing: 0) {
+            GradientText(text:"Move the map to pick a location")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+                .padding(.top)
+            Map(
+                coordinateRegion: $locationManager.region,
+                interactionModes: [.all],
+                annotationItems: selectedLocation == nil ? [] : [selectedLocation!]
+            ) { location in
+                MapPin(coordinate: location.coordinate, tint: .clear)
+                
+            }
+            .frame(height: 400)
+            .cornerRadius(cornerRadious)
+            .padding()
+            .onChange(of: locationManager.region.center.latitude) { newValue in
+                selectedLocation = IdentifiableLocation(coordinate: locationManager.region.center)
+            }
+            .overlay(alignment: .center) {
+                Image(systemName: "mappin")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 13)
+                    .foregroundColor(.red)
+                    .offset(y: -15)
+            }
+            
+            
+            if let _ = selectedLocation {
+                Button {
                     
-                    Text("আপনার বর্তমান লোকেশন:")
-                        .font(.headline)
+                } label: {
+                    Text("Done")
                         .padding()
-                    
-                    Text("Latitude: \(locationManager.region.center.latitude)")
-                    Text("Longitude: \(locationManager.region.center.longitude)")
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .gradientBackground()
+                        .cornerRadius(cornerRadious)
+                        .padding()
                 }
+
+                 
+            } else {
+                Text("Move the map to pick a location")
+                    .padding()
+            }
+        }
+        .onAppear {
+            locationManager.region = locationManager.region 
+        }
+        .fontDesign(.serif)
         
     }
 }
 
 #Preview {
-    MapSelectionView()
-}
-
-
-import SwiftUI
-import MapKit
-import CoreLocation
-
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    private let locationManager = CLLocationManager()
-    
-    @Published var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0), // ডিফল্ট লোকেশন
-        span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-    )
-    
-    override init() {
-        super.init()
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization() // অনুমতি চাইবে
-        locationManager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last {
-            DispatchQueue.main.async {
-                self.region = MKCoordinateRegion(
-                    center: location.coordinate,
-                    span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-                )
-            }
-        }
+    MapSelectionView( ){ _ in
+        
     }
 }

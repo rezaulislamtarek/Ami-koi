@@ -17,7 +17,7 @@ struct RouteHandler : View {
                     case .homeView : HomeView()
                     case .reminderListView : RemindersView()
                     case .setReminderView : SetReminderView()
-                    case .mapSelectionView: MapSelectionView()
+                    case .mapSelectionView: MapSelectionView(){ location in }
                     }
                 }
         }
@@ -25,8 +25,10 @@ struct RouteHandler : View {
             if let route = item.destination as? Route {
                 switch route {
                 case .mapSelectionView :
-                    MapSelectionView()
-                        .presentationDetents([.medium, .large])
+                    MapSelectionView(){ location in
+                        
+                    }
+                        .presentationDetents([.height(600), .large])
                         .presentationDragIndicator(.visible)
                 default:
                     EmptyView()
