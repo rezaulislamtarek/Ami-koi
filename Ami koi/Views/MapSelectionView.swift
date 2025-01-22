@@ -8,6 +8,7 @@ import SwiftUI
 import MapKit
 
 struct MapSelectionView: View {
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var locationManager = LocationManager()
     @State private var selectedLocation: IdentifiableLocation? // নতুন টাইপ ব্যবহার
     @State private var address : String = ""
@@ -47,6 +48,11 @@ struct MapSelectionView: View {
             
             if let _ = selectedLocation {
                 Button {
+                    let cclocation = CLLocation(
+                        latitude: selectedLocation!.coordinate.latitude,
+                        longitude: selectedLocation!.coordinate.longitude                    )
+                    location(cclocation)
+                    dismiss()
                     
                 } label: {
                     Text("Done")

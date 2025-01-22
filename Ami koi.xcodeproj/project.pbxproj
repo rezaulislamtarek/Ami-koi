@@ -24,7 +24,6 @@
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
 		0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */; };
-		0BFDEF8D2D3D55E100ABF97D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8C2D3D55E100ABF97D /* ContentView.swift */; };
 		0BFDEF8F2D3D55E200ABF97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */; };
 		0BFDEF922D3D55E200ABF97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF912D3D55E200ABF97D /* Preview Assets.xcassets */; };
 		0BFDEF992D3D5D3C00ABF97D /* LocationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */; };
@@ -50,7 +49,6 @@
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		0BFDEF872D3D55E100ABF97D /* Ami koi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ami koi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ami_koiApp.swift; sourceTree = "<group>"; };
-		0BFDEF8C2D3D55E100ABF97D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BFDEF912D3D55E200ABF97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRoot.swift; sourceTree = "<group>"; };
@@ -121,6 +119,17 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		0B66473B2D40C63400FB9C75 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BFDEF9A2D3D615500ABF97D /* HomeView.swift */,
+				0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */,
+				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
+				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0BD2FC8B2D3E8E41005E07BF /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +157,7 @@
 		0BFDEF892D3D55E100ABF97D /* Ami koi */ = {
 			isa = PBXGroup;
 			children = (
+				0B66473B2D40C63400FB9C75 /* Views */,
 				0B348CD82D3F25FB00A37C15 /* Router */,
 				0BD2FC8B2D3E8E41005E07BF /* Components */,
 				0B0732B82D3DE4C7008EAE7B /* Models */,
@@ -157,14 +167,9 @@
 				0B0732AC2D3DD650008EAE7B /* Exensions */,
 				0BFDEF9C2D3D634F00ABF97D /* Ami-koi-Info.plist */,
 				0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */,
-				0BFDEF8C2D3D55E100ABF97D /* ContentView.swift */,
 				0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */,
 				0BFDEF902D3D55E200ABF97D /* Preview Content */,
 				0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */,
-				0BFDEF9A2D3D615500ABF97D /* HomeView.swift */,
-				0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */,
-				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
-				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
 				0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */,
 				0BB71F9B2D4084570054E85C /* LocationManager.swift */,
 			);
@@ -254,7 +259,6 @@
 				0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */,
 				0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */,
 				0B0732B12D3DD828008EAE7B /* LocationUtils.swift in Sources */,
-				0BFDEF8D2D3D55E100ABF97D /* ContentView.swift in Sources */,
 				0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */,
 				0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */,
 				0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */,
