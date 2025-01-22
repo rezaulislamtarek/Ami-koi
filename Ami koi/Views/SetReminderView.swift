@@ -13,7 +13,6 @@ struct SetReminderView: View {
     private var corneerRadious : CGFloat = 16
     var body: some View {
         VStack{
-            
                 VStack {
                    
                     Button(action: {
@@ -26,6 +25,7 @@ struct SetReminderView: View {
                                 Image(systemName: "hand.tap")
                             }
                             .font(.title2)
+                            Text("Address: \(router.args["location"] )")
                             Text("No location added")
                                 .foregroundStyle(.primary.opacity(0.7))
                                 

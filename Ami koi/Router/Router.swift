@@ -10,6 +10,7 @@ import SwiftUI
 public final class Router: ObservableObject {
     @Published public var navPath = NavigationPath()
     @Published public var presentedSheet: AnyIdentifiable?
+    @Published public var args : [String : Any] = [:]
 
     public init() {}
 

@@ -26,10 +26,9 @@ struct RouteHandler : View {
                 switch route {
                 case .mapSelectionView :
                     MapSelectionView(){ location in
-                        
-                    }
-                        .presentationDetents([.height(600), .large])
-                        .presentationDragIndicator(.visible)
+                        router.args["location"] = location
+                    }.presentationDetents([.height(600), .large])
+                    .presentationDragIndicator(.visible)
                 default:
                     EmptyView()
                 }

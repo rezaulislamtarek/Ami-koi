@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RemindersView: View {
-    @EnvironmentObject private var route : Router
+    @EnvironmentObject private var router : Router
 
     private let cornerRadious : CGFloat = 16
     var body: some View {
@@ -20,13 +20,14 @@ struct RemindersView: View {
                     .scaledToFit()
                     .frame(width: 100)
                     .foregroundColor(.primary.opacity(0.1))
+                
                 GradientText(text: "Not yet added any ideas/ tasks, reminders that i can tell you to do based on your location.", font: .callout, fontWeight: .regular)
                     .multilineTextAlignment(.center)
             }
             .padding()
             Spacer()
             Button(action: {
-                route.navigate(to: Route.setReminderView)
+                router.navigate(to: Route.setReminderView)
             }, label: {
                 Text("Want to add a Reminder?")
                     .foregroundStyle(.white)
