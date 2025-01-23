@@ -20,6 +20,7 @@ final class ReminderRoot : ObservableObject{
         Task{
             let addressRaw = try await LocationUtils.getAddressFromCoordinates(location: location)
             address = addressRaw?.replacingNewlineWithComma()
+            print("address \(address)")
         }
     }
     

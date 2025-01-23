@@ -33,8 +33,10 @@ struct SetReminderView: View {
                             Text( reminderRoot.address == nil ?  "No location added" : reminderRoot.address!)
                                 .foregroundStyle(.primary.opacity(0.7))
                                 .frame(maxWidth: .infinity, alignment: .leading)
+                                .multilineTextAlignment(.leading)
                                 
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .foregroundStyle(.white)
                         .padding()
                         .gradientBackground([.green, .blue.opacity(0.5)])
@@ -83,4 +85,5 @@ struct SetReminderView: View {
 
 #Preview {
     SetReminderView()
+        .environmentObject(Router())
 }
