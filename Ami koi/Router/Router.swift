@@ -10,7 +10,7 @@ import SwiftUI
 public final class Router: ObservableObject {
     @Published public var navPath = NavigationPath()
     @Published public var presentedSheet: AnyIdentifiable?
-    @Published public var args : [String : Any] = [:]
+    @Published public var args : [ArgEnum : Any] = [:]
 
     public init() {}
 
@@ -34,6 +34,19 @@ public final class Router: ObservableObject {
 
     public func dismissSheet() {
         presentedSheet = nil
+    }
+    
+    public func isInStack(destination: any Hashable) -> Bool {
+        let mirror = Mirror(reflecting: navPath)
+        
+        for child in mirror.children {
+            if let hashableItem = child.value as? AnyHashable,
+               hashableItem == destination as? AnyHashable {
+                return true
+            }
+        }
+        
+        return false
     }
 }
 

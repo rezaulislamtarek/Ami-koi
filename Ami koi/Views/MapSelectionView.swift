@@ -10,7 +10,7 @@ import MapKit
 struct MapSelectionView: View {
     @Environment(\.dismiss) private var dismiss
     @StateObject private var locationManager = LocationManager()
-    @State private var selectedLocation: IdentifiableLocation? // নতুন টাইপ ব্যবহার
+    @State private var selectedLocation: IdentifiableLocation?
     @State private var address : String = ""
     private let cornerRadious : CGFloat = 16
     
@@ -52,6 +52,7 @@ struct MapSelectionView: View {
                         latitude: selectedLocation!.coordinate.latitude,
                         longitude: selectedLocation!.coordinate.longitude                    )
                     location(cclocation)
+                    print("latLon: \(cclocation.coordinate.latitude),\(cclocation.coordinate.longitude)")
                     dismiss()
                     
                 } label: {
@@ -63,15 +64,15 @@ struct MapSelectionView: View {
                         .cornerRadius(cornerRadious)
                         .padding()
                 }
-
-                 
+                
+                
             } else {
                 Text("Move the map to pick a location")
                     .padding()
             }
         }
         .onAppear {
-            locationManager.region = locationManager.region 
+            locationManager.region = locationManager.region
         }
         .fontDesign(.serif)
         

@@ -26,7 +26,7 @@ struct RouteHandler : View {
                 switch route {
                 case .mapSelectionView :
                     MapSelectionView(){ location in
-                        router.args["location"] = location
+                        router.args[.location] = location
                     }.presentationDetents([.height(600), .large])
                     .presentationDragIndicator(.visible)
                 default:

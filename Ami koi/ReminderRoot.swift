@@ -6,13 +6,21 @@
 //
 
 import Foundation
+import CoreLocation
 
 final class ReminderRoot : ObservableObject{
     @Published var location : LocationRoot = LocationRoot()
-    
+    @Published var address : String? = nil
     
     init(){
         getLocation()
+    }
+    
+    func fetchAddress(location : CLLocation){
+        Task{
+            let addressRaw = try await LocationUtils.getAddressFromCoordinates(location: location)
+            address = addressRaw?.replacingNewlineWithComma()
+        }
     }
     
     func getLocation(){
@@ -21,7 +29,5 @@ final class ReminderRoot : ObservableObject{
             location.objectWillChange.send()
             print("My Location \(location.lastLocation?.coordinate.latitude ?? 0)")
         }
-        
-        
     }
 }

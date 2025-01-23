@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct SetReminderView: View {
     @EnvironmentObject private var router : Router
     @State private var details : String = ""
     private var corneerRadious : CGFloat = 16
+    @StateObject var reminderRoot : ReminderRoot = ReminderRoot()
+    
     var body: some View {
+       
         VStack{
                 VStack {
                    
@@ -25,9 +29,10 @@ struct SetReminderView: View {
                                 Image(systemName: "hand.tap")
                             }
                             .font(.title2)
-                            Text("Address: \(router.args["location"] )")
-                            Text("No location added")
+                            
+                            Text( reminderRoot.address == nil ?  "No location added" : reminderRoot.address!)
                                 .foregroundStyle(.primary.opacity(0.7))
+                                .frame(maxWidth: .infinity, alignment: .leading)
                                 
                         }
                         .foregroundStyle(.white)
@@ -63,6 +68,16 @@ struct SetReminderView: View {
         }
         .padding(32)
         .fontDesign(.serif)
+        .onChange(of: router.args[.location] as? CLLocation) { newValue in
+            print("location changed: \(newValue)")
+            reminderRoot.fetchAddress(location: newValue!)
+        }
+        .onDisappear {
+            if !router.isInStack(destination: Route.setReminderView) {
+                print("Arg Removed from stack")
+                router.args[.location] = nil
+            }
+        }
     }
 }
 
