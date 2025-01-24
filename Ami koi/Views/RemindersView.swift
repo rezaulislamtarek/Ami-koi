@@ -47,7 +47,7 @@ struct RemindersView: View {
             }, label: {
                 Text("Want to add a Reminder?")
                     .foregroundStyle(.white)
-                    .padding()
+                    .padding(.vertical)
                     .frame(maxWidth: .infinity)
                     .gradientBackground()
                     .cornerRadius(cornerRadious)
