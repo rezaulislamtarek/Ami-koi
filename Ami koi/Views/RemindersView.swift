@@ -21,7 +21,7 @@ struct RemindersView: View {
     var body: some View {
         VStack{
             if !tasks.isEmpty{
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     ForEach(tasks){ task in
                         TaskRowView(title: task.title ?? "", address: task.address ?? "", isComplited: task.isComplite) { action in
                             switch action {
