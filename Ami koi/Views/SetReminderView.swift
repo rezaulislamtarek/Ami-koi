@@ -9,10 +9,12 @@ import SwiftUI
 import CoreLocation
 
 struct SetReminderView: View {
+    @Environment(\.managedObjectContext) var context
     @EnvironmentObject private var router : Router
     @State private var details : String = ""
     private var corneerRadious : CGFloat = 16
     @StateObject var reminderRoot : ReminderRoot = ReminderRoot()
+    @State var location : CLLocation? = nil
     
     var body: some View {
        
@@ -54,7 +56,13 @@ struct SetReminderView: View {
                     Spacer()
                     
                     Button {
-                        
+                        let task = MyTask(context: context)
+                        task.title = details
+                        task.lat = location?.coordinate.latitude ?? 0
+                        task.lon = location?.coordinate.longitude ?? 0
+                        task.isComplite = false
+                        task.address = reminderRoot.address
+                        try? context.save()
                     } label: {
                         Text("Set Reminder")
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -71,7 +79,7 @@ struct SetReminderView: View {
         .padding(32)
         .fontDesign(.serif)
         .onChange(of: router.args[.location] as? CLLocation) { newValue in
-            print("location changed: \(newValue)")
+            location = newValue
             reminderRoot.fetchAddress(location: newValue!)
         }
         .onDisappear {

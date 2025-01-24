@@ -14,6 +14,8 @@
 		0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0732B92D3DE4D7008EAE7B /* Quotes.swift */; };
 		0B0732BC2D3DE50B008EAE7B /* QuoteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0732BB2D3DE50B008EAE7B /* QuoteProvider.swift */; };
 		0B1645502D42A7A800BD1116 /* String+Extenssion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B16454F2D42A7A800BD1116 /* String+Extenssion.swift */; };
+		0B1715A92D431CEF001223F7 /* AmiKoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1715A72D431CEF001223F7 /* AmiKoi.xcdatamodeld */; };
+		0B1715AD2D431D78001223F7 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1715AC2D431D78001223F7 /* PersistenceController.swift */; };
 		0B1E421C2D4123AD004B6FBD /* ArgEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */; };
 		0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CD92D3F26DD00A37C15 /* Route.swift */; };
 		0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDB2D3F26EA00A37C15 /* Router.swift */; };
@@ -21,6 +23,7 @@
 		0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */; };
 		0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */; };
 		0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */; };
+		0BB065242D432D62001D1B77 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB065232D432D62001D1B77 /* TaskRowView.swift */; };
 		0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB71F9B2D4084570054E85C /* LocationManager.swift */; };
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
@@ -40,6 +43,8 @@
 		0B0732B92D3DE4D7008EAE7B /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
 		0B0732BB2D3DE50B008EAE7B /* QuoteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteProvider.swift; sourceTree = "<group>"; };
 		0B16454F2D42A7A800BD1116 /* String+Extenssion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extenssion.swift"; sourceTree = "<group>"; };
+		0B1715A82D431CEF001223F7 /* AmiKoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AmiKoi.xcdatamodel; sourceTree = "<group>"; };
+		0B1715AC2D431D78001223F7 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgEnum.swift; sourceTree = "<group>"; };
 		0B348CD92D3F26DD00A37C15 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0B348CDB2D3F26EA00A37C15 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
 		0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRoot.swift; sourceTree = "<group>"; };
+		0BB065232D432D62001D1B77 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		0BB71F9B2D4084570054E85C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
@@ -114,6 +120,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		0B1715AA2D431D21001223F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0B1715AB2D431D3F001223F7 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0B1715AB2D431D3F001223F7 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				0B1715AC2D431D78001223F7 /* PersistenceController.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		0B348CD82D3F25FB00A37C15 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +154,7 @@
 				0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */,
 				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
 				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
+				0BB065232D432D62001D1B77 /* TaskRowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +170,7 @@
 		0BFDEF7E2D3D55E100ABF97D = {
 			isa = PBXGroup;
 			children = (
+				0B1715A72D431CEF001223F7 /* AmiKoi.xcdatamodeld */,
 				0BFDEF892D3D55E100ABF97D /* Ami koi */,
 				0BFDEF882D3D55E100ABF97D /* Products */,
 			);
@@ -163,6 +187,7 @@
 		0BFDEF892D3D55E100ABF97D /* Ami koi */ = {
 			isa = PBXGroup;
 			children = (
+				0B1715AA2D431D21001223F7 /* Services */,
 				0B66473B2D40C63400FB9C75 /* Views */,
 				0B348CD82D3F25FB00A37C15 /* Router */,
 				0BD2FC8B2D3E8E41005E07BF /* Components */,
@@ -261,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1715AD2D431D78001223F7 /* PersistenceController.swift in Sources */,
 				0B1645502D42A7A800BD1116 /* String+Extenssion.swift in Sources */,
+				0B1715A92D431CEF001223F7 /* AmiKoi.xcdatamodeld in Sources */,
 				0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */,
 				0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */,
 				0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */,
@@ -272,6 +299,7 @@
 				0BFDEF9B2D3D615500ABF97D /* HomeView.swift in Sources */,
 				0B1E421C2D4123AD004B6FBD /* ArgEnum.swift in Sources */,
 				0BFDEF992D3D5D3C00ABF97D /* LocationRoot.swift in Sources */,
+				0BB065242D432D62001D1B77 /* TaskRowView.swift in Sources */,
 				0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */,
 				0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */,
 				0B0732BC2D3DE50B008EAE7B /* QuoteProvider.swift in Sources */,
@@ -492,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B1715A72D431CEF001223F7 /* AmiKoi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B1715A82D431CEF001223F7 /* AmiKoi.xcdatamodel */,
+			);
+			currentVersion = 0B1715A82D431CEF001223F7 /* AmiKoi.xcdatamodel */;
+			path = AmiKoi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0BFDEF7F2D3D55E100ABF97D /* Project object */;
 }
