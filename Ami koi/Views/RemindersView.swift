@@ -29,14 +29,16 @@ struct RemindersView: View {
                                 task.isComplite = value
                                 print("\(value)")
                                 try? context.save()
-                            case .editTitle:
+                            case .editAddress(let value):
                                 print("Edit title")
+                                task.address = value
+                                try? context.save()
                             }
                         }
                         .listRowInsets(EdgeInsets())
                         .listRowSeparator(.hidden)
                         .cornerRadius(cornerRadious)
-                        .padding(.bottom)
+                        .padding(.vertical, 4)
                     }
                     .onDelete(perform: { indexSet in
                         deleteTask(at: indexSet)
@@ -45,6 +47,7 @@ struct RemindersView: View {
                 }
                 .listRowSeparator(.hidden)
                 .listStyle(.plain)
+                .listRowInsets(EdgeInsets())
             }
             Spacer()
             if tasks.isEmpty{
