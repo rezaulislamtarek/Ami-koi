@@ -21,7 +21,7 @@ struct RemindersView: View {
     var body: some View {
         VStack{
             if !tasks.isEmpty{
-                ScrollView(showsIndicators: false){
+                List{
                     ForEach(tasks){ task in
                         TaskRowView(title: task.title ?? "", address: task.address ?? "", isComplited: task.isComplite) { action in
                             switch action {
@@ -33,9 +33,15 @@ struct RemindersView: View {
                                 print("Edit title")
                             }
                         }
+                        .listRowSeparator(.hidden)
                         .cornerRadius(cornerRadious)
                     }
+                    .onDelete(perform: { indexSet in
+                        deleteTask(at: indexSet)
+                    })
                 }
+                .listRowSeparator(.hidden)
+                .listStyle(.plain)
             }
             Spacer()
             if tasks.isEmpty{
@@ -59,8 +65,24 @@ struct RemindersView: View {
         .padding(24)
         .fontDesign(.serif)
     }
+    
+    
+    private func deleteTask(at offsets: IndexSet) {
+            withAnimation {
+                offsets.map { tasks[$0] }.forEach(context.delete)
+
+                do {
+                    try context.save() // Save after deletion
+                } catch {
+                    let nsError = error as NSError
+                    print("Error deleting task: \(nsError), \(nsError.userInfo)")
+                }
+            }
+        }
+    
 
 }
+
 
 #Preview {
     RemindersView()

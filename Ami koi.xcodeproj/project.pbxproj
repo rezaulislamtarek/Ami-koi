@@ -23,6 +23,8 @@
 		0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */; };
 		0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */; };
 		0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */; };
+		0B5CAB6E2D44953900C93954 /* LocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */; };
+		0B5CAB702D4498D500C93954 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CAB6F2D4498D500C93954 /* TaskManager.swift */; };
 		0BB065242D432D62001D1B77 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB065232D432D62001D1B77 /* TaskRowView.swift */; };
 		0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB71F9B2D4084570054E85C /* LocationManager.swift */; };
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
@@ -52,6 +54,8 @@
 		0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
 		0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
 		0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRoot.swift; sourceTree = "<group>"; };
+		0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerService.swift; sourceTree = "<group>"; };
+		0B5CAB6F2D4498D500C93954 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		0BB065232D432D62001D1B77 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		0BB71F9B2D4084570054E85C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		0B1715AA2D431D21001223F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0B5CAB6C2D44952800C93954 /* Location */,
 				0B1715AB2D431D3F001223F7 /* Persistence */,
 			);
 			path = Services;
@@ -132,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1715AC2D431D78001223F7 /* PersistenceController.swift */,
+				0B5CAB6F2D4498D500C93954 /* TaskManager.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -145,6 +151,14 @@
 				0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		0B5CAB6C2D44952800C93954 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		0B66473B2D40C63400FB9C75 /* Views */ = {
@@ -306,7 +320,9 @@
 				0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */,
 				0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */,
 				0B0732AE2D3DD677008EAE7B /* CLPlacemark+Extension.swift in Sources */,
+				0B5CAB6E2D44953900C93954 /* LocationManagerService.swift in Sources */,
 				0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */,
+				0B5CAB702D4498D500C93954 /* TaskManager.swift in Sources */,
 				0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */,
 				0B0732B42D3DE20F008EAE7B /* TimeOfDayGreetings.swift in Sources */,
 			);
@@ -447,6 +463,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ami-koi-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = AroundTask;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for xyz benefits for you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -479,6 +497,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Ami-koi-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = AroundTask;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Your location is required for xyz benefits for you";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your location is required for xyz benefits for you";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
