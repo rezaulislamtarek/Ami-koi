@@ -33,12 +33,15 @@ struct RemindersView: View {
                                 print("Edit title")
                             }
                         }
+                        .listRowInsets(EdgeInsets())
                         .listRowSeparator(.hidden)
                         .cornerRadius(cornerRadious)
+                        .padding(.bottom)
                     }
                     .onDelete(perform: { indexSet in
                         deleteTask(at: indexSet)
                     })
+                     
                 }
                 .listRowSeparator(.hidden)
                 .listStyle(.plain)
