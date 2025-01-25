@@ -26,12 +26,17 @@ class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDeleg
     }
 
     private func addGeofence(for task: MyTask) {
-        let center = CLLocationCoordinate2D(latitude: task.lat, longitude: task.lon)
-        let region = CLCircularRegion(center: center, radius: 1000, identifier: task.title!)
-        region.notifyOnEntry = true
-        region.notifyOnExit = true
-        locationManager.startMonitoring(for: region)
-        print("Location monitoring: \(task.title)")
+        
+        
+        if !task.isComplite{
+            let center = CLLocationCoordinate2D(latitude: task.lat, longitude: task.lon)
+            let region = CLCircularRegion(center: center, radius: 200, identifier: task.title!)
+            region.notifyOnEntry = true
+            region.notifyOnExit = true
+            locationManager.startMonitoring(for: region)
+            //sendNotification(title: "\(task.address)", body: "\(task.title) is monitoring....")
+            print("Location monitoring: \(task.title ?? "")")
+        }
     }
 
     // যখন Geofence এরিয়াতে প্রবেশ করবে

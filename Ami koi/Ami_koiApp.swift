@@ -15,6 +15,7 @@ struct Ami_koiApp: App {
     
     init(){
         requestNotificationPermission()
+        configureNotificationDelegate()
     }
     
     var body: some Scene {
@@ -40,6 +41,10 @@ struct Ami_koiApp: App {
                     print("Error: \(error.localizedDescription)")
                 }
             }
+        }
+    
+    private func configureNotificationDelegate() {
+            UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
         }
     
 }
