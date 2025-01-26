@@ -51,35 +51,9 @@ struct TaskRowView: View {
         .gradientBackground([ .green.opacity(0.1), .accentColor.opacity(0.1)])
         .fontDesign(.serif) 
         .sheet(isPresented: $enableAddressEditing, content: {
-            VStack(alignment: .leading, spacing: 16){
-                Text("Edit Address Name")
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                TextField("Enter new Address", text: $address)
-                    .padding()
-                    .background()
-                    .cornerRadius(16)
-                Spacer()
-                Button {
-                    action(.editAddress(address))
-                    enableAddressEditing.toggle()
-                } label: {
-                    Text("Done")
-                        .padding(12)
-                        .frame(maxWidth: .infinity)
-                        .foregroundStyle(.white)
-                        .gradientBackground()
-                        .cornerRadius(16)
-                }
-
-            }
-            .presentationDetents([.height(300)])
-            .fontDesign(.serif)
-            .padding()
-            .padding(.vertical)
-            .gradientBackground([.green.opacity(0.1), .blue.opacity(0.1)])
-            
-            
-            
+            EditAddressView(enableAddressEditing: $enableAddressEditing, address: $address, doneButtonCliked: {
+                action(.editAddress(address))
+            })
         })
          
     }
@@ -93,3 +67,4 @@ enum TaskAction{
 #Preview {
     TaskRowView(title: "Need to buy a computer", address: "IDB Bhobon, Agargong, Dhaka, Bangladesh", isComplited: true){ action in }
 }
+
