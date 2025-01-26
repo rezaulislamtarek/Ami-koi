@@ -32,6 +32,7 @@
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
 		0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */; };
+		0BED14CD2D46AEA7001ECB21 /* NoTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */; };
 		0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */; };
 		0BFDEF8F2D3D55E200ABF97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */; };
 		0BFDEF922D3D55E200ABF97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF912D3D55E200ABF97D /* Preview Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressView.swift; sourceTree = "<group>"; };
+		0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskView.swift; sourceTree = "<group>"; };
 		0BFDEF872D3D55E100ABF97D /* Ami koi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ami koi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ami_koiApp.swift; sourceTree = "<group>"; };
 		0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
 				0BB065232D432D62001D1B77 /* TaskRowView.swift */,
 				0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */,
+				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */,
 				0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */,
 				0B0732BC2D3DE50B008EAE7B /* QuoteProvider.swift in Sources */,
+				0BED14CD2D46AEA7001ECB21 /* NoTaskView.swift in Sources */,
 				0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */,
 				0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */,
 				0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */,
