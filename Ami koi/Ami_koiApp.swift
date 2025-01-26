@@ -33,7 +33,7 @@ struct Ami_koiApp: App {
         }
     }
     
-    func requestNotificationPermission() {
+    private func requestNotificationPermission() {
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { success, error in
                 if success {
                     print("Notification permission granted")
