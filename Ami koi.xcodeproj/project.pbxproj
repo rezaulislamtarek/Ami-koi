@@ -31,6 +31,7 @@
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
 		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
+		0BEA27072D473798009E7421 /* WhereAmIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA27062D473798009E7421 /* WhereAmIView.swift */; };
 		0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */; };
 		0BED14CD2D46AEA7001ECB21 /* NoTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */; };
 		0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */; };
@@ -65,6 +66,7 @@
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		0BEA27062D473798009E7421 /* WhereAmIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmIView.swift; sourceTree = "<group>"; };
 		0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressView.swift; sourceTree = "<group>"; };
 		0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTaskView.swift; sourceTree = "<group>"; };
 		0BFDEF872D3D55E100ABF97D /* Ami koi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ami koi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 				0BB065232D432D62001D1B77 /* TaskRowView.swift */,
 				0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */,
 				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
+				0BEA27062D473798009E7421 /* WhereAmIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */,
 				0B0732B12D3DD828008EAE7B /* LocationUtils.swift in Sources */,
 				0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */,
+				0BEA27072D473798009E7421 /* WhereAmIView.swift in Sources */,
 				0B51A6712D451D2100E6CD8C /* NotificationDelegate.swift in Sources */,
 				0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */,
 				0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */,

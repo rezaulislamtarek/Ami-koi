@@ -15,7 +15,7 @@ struct HomeView: View {
             VStack {
                 HStack {
                     GreetingView()
-                    Image(systemName: "lightbulb.max")
+                    Image(systemName: "list.clipboard")
                         .resizable()
                         .foregroundStyle(.white)
                         .scaledToFit()
@@ -43,52 +43,11 @@ struct HomeView: View {
     HomeView()
 }
 
-struct WhereAmIView: View {
-    @StateObject private var location : LocationRoot = LocationRoot()
-    var body: some View {
-        VStack{
-            VStack{
-                if let address = location.address {
-                    HStack {
-                        Text("I am at \n\(address)")
-                        Spacer()
-                        Image(systemName: "mappin.and.ellipse")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
-                    }
-                        
-                }else{
-                    Text("")
-                         
-                }
-            }
-            .font(.callout)
-            .padding(.horizontal)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .frame(height: 120)
-            .background(.green.opacity( location.address == nil ? 0 : 0.05))
-            .cornerRadius(25)
-             
-            Button(action: {
-                location.fetchLocation()
-            }, label: {
-                GradientText(text: "Where am I?", gradientColors: [.green, .blue], font: .system(.title2, design: .rounded), fontWeight: .bold)
-                    .frame(maxWidth: .infinity)
-                    .padding(12)
-                    
-            })
-            .buttonStyle(.bordered)
-            .tint(.green.opacity(0.5))
-             
-        }
-    }
-}
-
+ 
 struct GreetingView: View {
     var body: some View {
         VStack(alignment: .leading ){
-            Text("Hi Reza,")
+            Text("Hey you,")
                 .bold()
             let greetingText = TimeOfDayGreetings.getGreeting().rawValue
             GradientText(text: greetingText, gradientColors: [.green, .blue], font: .title, fontWeight: .bold)
