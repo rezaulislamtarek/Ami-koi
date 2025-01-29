@@ -18,6 +18,7 @@
 		0B1715AD2D431D78001223F7 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1715AC2D431D78001223F7 /* PersistenceController.swift */; };
 		0B1E421C2D4123AD004B6FBD /* ArgEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */; };
 		0B26DB892D4A4DF60043CFA5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */; };
+		0B26DB8B2D4A4E3F0043CFA5 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26DB8A2D4A4E3F0043CFA5 /* GreetingView.swift */; };
 		0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CD92D3F26DD00A37C15 /* Route.swift */; };
 		0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDB2D3F26EA00A37C15 /* Router.swift */; };
 		0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDD2D3F270600A37C15 /* RouteHandler.swift */; };
@@ -54,6 +55,7 @@
 		0B1715AC2D431D78001223F7 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgEnum.swift; sourceTree = "<group>"; };
 		0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		0B26DB8A2D4A4E3F0043CFA5 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		0B348CD92D3F26DD00A37C15 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0B348CDB2D3F26EA00A37C15 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0B348CDD2D3F270600A37C15 /* RouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteHandler.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
 				0BEA27062D473798009E7421 /* WhereAmIView.swift */,
 				0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */,
+				0B26DB8A2D4A4E3F0043CFA5 /* GreetingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */,
 				0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */,
 				0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */,
+				0B26DB8B2D4A4E3F0043CFA5 /* GreetingView.swift in Sources */,
 				0B0732AE2D3DD677008EAE7B /* CLPlacemark+Extension.swift in Sources */,
 				0B5CAB6E2D44953900C93954 /* LocationManagerService.swift in Sources */,
 				0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */,

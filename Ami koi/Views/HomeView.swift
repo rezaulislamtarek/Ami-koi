@@ -42,20 +42,3 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
-
- 
-struct GreetingView: View {
-    var body: some View {
-        VStack(alignment: .leading ){
-            Text("Hey you,")
-                .bold()
-            let greetingText = TimeOfDayGreetings.getGreeting().rawValue
-            GradientText(text: greetingText, gradientColors: [.green, .blue], font: .title, fontWeight: .bold)
-            
-        }
-        .font(.title)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding()
-    }
-}
-
