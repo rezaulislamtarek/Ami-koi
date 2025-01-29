@@ -17,6 +17,7 @@
 		0B1715A92D431CEF001223F7 /* AmiKoi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1715A72D431CEF001223F7 /* AmiKoi.xcdatamodeld */; };
 		0B1715AD2D431D78001223F7 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1715AC2D431D78001223F7 /* PersistenceController.swift */; };
 		0B1E421C2D4123AD004B6FBD /* ArgEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */; };
+		0B26DB892D4A4DF60043CFA5 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */; };
 		0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CD92D3F26DD00A37C15 /* Route.swift */; };
 		0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDB2D3F26EA00A37C15 /* Router.swift */; };
 		0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDD2D3F270600A37C15 /* RouteHandler.swift */; };
@@ -52,6 +53,7 @@
 		0B1715A82D431CEF001223F7 /* AmiKoi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AmiKoi.xcdatamodel; sourceTree = "<group>"; };
 		0B1715AC2D431D78001223F7 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		0B1E421B2D4123AD004B6FBD /* ArgEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgEnum.swift; sourceTree = "<group>"; };
+		0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		0B348CD92D3F26DD00A37C15 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		0B348CDB2D3F26EA00A37C15 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0B348CDD2D3F270600A37C15 /* RouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteHandler.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */,
 				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
 				0BEA27062D473798009E7421 /* WhereAmIView.swift */,
+				0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1715AD2D431D78001223F7 /* PersistenceController.swift in Sources */,
+				0B26DB892D4A4DF60043CFA5 /* QuoteView.swift in Sources */,
 				0B1645502D42A7A800BD1116 /* String+Extenssion.swift in Sources */,
 				0B1715A92D431CEF001223F7 /* AmiKoi.xcdatamodeld in Sources */,
 				0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */,
