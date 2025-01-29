@@ -15,18 +15,20 @@ struct HomeView: View {
             VStack {
                 HStack {
                     GreetingView()
-                    Image(systemName: "list.clipboard")
-                        .resizable()
-                        .foregroundStyle(.white)
-                        .scaledToFit()
-                        .frame(width: 30)
-                        .padding(10)
-                        .gradientBackground()
-                        .cornerRadius(16)
-                        .onTapGesture {
-                            router.navigate(to: Route.reminderListView)
-                        }
-                    
+                   
+                    Button {
+                        router.navigate(to: Route.reminderListView)
+                    } label: {
+                        Image(systemName: "list.clipboard")
+                            .resizable()
+                            .foregroundStyle(.white)
+                            .scaledToFit()
+                            .frame(width: 30)
+                            .padding(10)
+                            .gradientBackground()
+                            .cornerRadius(16)
+                    }
+ 
                 }
                 Spacer()
                 QuoteView()
