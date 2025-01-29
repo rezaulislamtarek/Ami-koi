@@ -15,20 +15,7 @@ struct HomeView: View {
             VStack {
                 HStack {
                     GreetingView()
-                   
-                    Button {
-                        router.navigate(to: Route.reminderListView)
-                    } label: {
-                        Image(systemName: "list.clipboard")
-                            .resizable()
-                            .foregroundStyle(.white)
-                            .scaledToFit()
-                            .frame(width: 30)
-                            .padding(10)
-                            .gradientBackground()
-                            .cornerRadius(16)
-                    }
- 
+                    myTaskButtonSetion
                 }
                 Spacer()
                 QuoteView()
@@ -38,6 +25,23 @@ struct HomeView: View {
             WhereAmIView()
         }
         .padding(24)
+    }
+}
+
+extension HomeView{
+    private var myTaskButtonSetion : some View{
+        Button {
+            router.navigate(to: Route.reminderListView)
+        } label: {
+            Image(systemName: "list.clipboard")
+                .resizable()
+                .foregroundStyle(.white)
+                .scaledToFit()
+                .frame(width: 30)
+                .padding(10)
+                .gradientBackground()
+                .cornerRadius(16)
+        }
     }
 }
 
