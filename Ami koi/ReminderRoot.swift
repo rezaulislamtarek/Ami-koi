@@ -9,12 +9,9 @@ import Foundation
 import CoreLocation
 
 final class ReminderRoot : ObservableObject{
-    @Published var location : LocationRoot = LocationRoot()
     @Published var address : String? = nil
     
-    init(){
-        getLocation()
-    }
+     
     
     func fetchAddress(location : CLLocation){
         Task{
@@ -24,11 +21,5 @@ final class ReminderRoot : ObservableObject{
         }
     }
     
-    func getLocation(){
-        location.fetchLocation()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2 ){ [self] in
-            location.objectWillChange.send()
-            print("My Location \(location.lastLocation?.coordinate.latitude ?? 0)")
-        }
-    }
+     
 }
