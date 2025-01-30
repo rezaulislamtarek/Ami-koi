@@ -24,13 +24,7 @@ struct Ami_koiApp: App {
                 .environmentObject(router)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(locationManagerService)
-                .onAppear{
-                    let context = persistenceController.container.viewContext
-                    let taskManager = TaskManager(context: context)
-                    let tasks = taskManager.fetchTasks()
-                    print(tasks.debugDescription)
-                    locationManagerService.setupGeofences(for: tasks)
-                }
+               
         }
     }
     

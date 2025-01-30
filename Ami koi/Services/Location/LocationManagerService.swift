@@ -19,14 +19,16 @@ class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDeleg
         locationManager.startUpdatingLocation()
     }
     
+    /*
     func setupGeofences(for tasks: [MyTask]) {
-        // সব Geofence বন্ধ করে নতুন টাস্ক সেট করব
+        // removing first before add all
         removeAllGeofences()
         
         for task in tasks {
             addGeofence(for: task)
         }
     }
+    */
     
     func addGeofence(for task: MyTask) {
         if !task.isComplite {
@@ -59,15 +61,15 @@ class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDeleg
         }
     }
     
-    // যখন Geofence এরিয়াতে প্রবেশ করবে
+    // When you are going enter at Geofence area
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Location enter")
-        sendNotification(title: "টাস্ক এলাকা", body: "আপনি \(region.identifier) এলাকায় প্রবেশ করেছেন।")
+        sendNotification(title: "Around Task", body: "You are in \(region.identifier)")
     }
     
-    // যখন Geofence এরিয়া থেকে বের হবে
+    // When you are going out from Geofence area
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        sendNotification(title: "টাস্ক এলাকা", body: "আপনি \(region.identifier) এলাকা থেকে বের হয়েছেন।")
+        sendNotification(title: "Around Task", body: "You are out of \(region.identifier)")
     }
     
     private func sendNotification(title: String, body: String) {
