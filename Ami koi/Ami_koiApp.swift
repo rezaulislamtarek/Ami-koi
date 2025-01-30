@@ -23,6 +23,7 @@ struct Ami_koiApp: App {
             RouteHandler()
                 .environmentObject(router)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(locationManagerService)
                 .onAppear{
                     let context = persistenceController.container.viewContext
                     let taskManager = TaskManager(context: context)

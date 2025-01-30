@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct RemindersView: View {
-    
+    @EnvironmentObject private var locationManagerService : LocationManagerService
     @EnvironmentObject private var router : Router
     @Environment(\.managedObjectContext) var context
     @FetchRequest(
@@ -48,9 +48,14 @@ struct RemindersView: View {
     
     private func deleteTask(at offsets: IndexSet) {
             withAnimation {
-                offsets.map { tasks[$0] }.forEach(context.delete)
+                offsets.map {
+                    tasks[$0] }.forEach{ task in
+                        locationManagerService.removeGeofence(for: task)
+                        context.delete(task)
+                    }
 
                 do {
+                     
                     try context.save() // Save after deletion
                 } catch {
                     let nsError = error as NSError

@@ -28,7 +28,7 @@ class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDeleg
         }
     }
     
-    private func addGeofence(for task: MyTask) {
+    func addGeofence(for task: MyTask) {
         if !task.isComplite {
             let center = CLLocationCoordinate2D(latitude: task.lat, longitude: task.lon)
             let region = CLCircularRegion(center: center, radius: 200, identifier: task.title!)

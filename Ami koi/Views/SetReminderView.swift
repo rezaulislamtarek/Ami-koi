@@ -11,6 +11,7 @@ import CoreLocation
 struct SetReminderView: View {
     @Environment(\.managedObjectContext) var context
     @EnvironmentObject private var router : Router
+    @EnvironmentObject private var locationManagerService : LocationManagerService
     @State private var details : String = ""
     private var corneerRadious : CGFloat = 16
     @StateObject var reminderRoot : ReminderRoot = ReminderRoot()
@@ -63,6 +64,9 @@ struct SetReminderView: View {
                         task.isComplite = false
                         task.address = reminderRoot.address
                         try? context.save()
+                        locationManagerService.addGeofence(for: task)
+                        
+                        
                     } label: {
                         Text("Set Reminder")
                             .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/)
@@ -94,4 +98,5 @@ struct SetReminderView: View {
 #Preview {
     SetReminderView()
         .environmentObject(Router())
+        .environmentObject(LocationManagerService())
 }
