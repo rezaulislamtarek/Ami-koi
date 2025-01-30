@@ -20,16 +20,6 @@ class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    /*
-    func setupGeofences(for tasks: [MyTask]) {
-        // removing first before add all
-        removeAllGeofences()
-        
-        for task in tasks {
-            addGeofence(for: task)
-        }
-    }
-    */
     
     func addGeofence(for task: MyTask) {
         if !task.isComplite {
