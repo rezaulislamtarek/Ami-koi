@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct WhereAmIView: View {
-    @StateObject private var location : LocationRoot = LocationRoot()
+    @StateObject private var whereAmIVM : WhereAmIViewModel = WhereAmIViewModel()
     var body: some View {
         VStack{
             VStack{
-                if let address = location.address {
+                if let address = whereAmIVM.address {
                     HStack {
                         VStack(alignment: .leading) {
                             Text("I am at")
@@ -43,7 +43,7 @@ struct WhereAmIView: View {
             .fontDesign(.serif)
         }
         .onAppear{
-            location.fetchLocation()
+            whereAmIVM.fetchLocation()
         }
     }
 }

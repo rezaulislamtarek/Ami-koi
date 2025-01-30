@@ -9,7 +9,7 @@ import MapKit
 
 struct MapSelectionView: View {
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var locationManager = LocationManager()
+    @StateObject private var locationManager = MapSelectionViewModel()
     @State private var selectedLocation: IdentifiableLocation?
     @State private var address : String = ""
     private let cornerRadious : CGFloat = 16

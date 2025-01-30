@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
+class MapSelectionViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private let locationManager = CLLocationManager()
     
     @Published var region = MKCoordinateRegion(

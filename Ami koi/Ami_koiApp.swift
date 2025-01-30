@@ -11,7 +11,7 @@ import SwiftUI
 struct Ami_koiApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject private  var router : Router = Router()
-    @StateObject private var locationManagerService = LocationManagerService()
+    @StateObject private var locationManagerService = LocationService()
     
     init(){
         requestNotificationPermission()

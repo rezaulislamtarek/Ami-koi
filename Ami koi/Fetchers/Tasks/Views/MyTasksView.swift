@@ -8,8 +8,8 @@
 import SwiftUI
 import CoreData
 
-struct RemindersView: View {
-    @EnvironmentObject private var locationManagerService : LocationManagerService
+struct MyTasksView: View {
+    @EnvironmentObject private var locationManagerService : LocationService
     @EnvironmentObject private var router : Router
     @Environment(\.managedObjectContext) var context
     @FetchRequest(
@@ -67,7 +67,7 @@ struct RemindersView: View {
 
 }
 
-extension RemindersView{
+extension MyTasksView{
     private var taskListSection : some View{
         List{
             ForEach(tasks){ task in
@@ -101,7 +101,7 @@ extension RemindersView{
 
 
 #Preview {
-    RemindersView()
+    MyTasksView()
         .environmentObject(Router())
 }
 

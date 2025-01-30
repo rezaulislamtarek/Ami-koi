@@ -9,8 +9,9 @@ import Foundation
 import CoreLocation
 import UserNotifications
 
-class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDelegate {
+class LocationService: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
+    @Published var address : String? = nil
     
     override init() {
         super.init()
@@ -80,5 +81,13 @@ class LocationManagerService: NSObject, ObservableObject, CLLocationManagerDeleg
         
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
         UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
+     
+    func fetchAddress(location : CLLocation){
+        Task{
+            let addressRaw = try await LocationUtils.getAddressFromCoordinates(location: location)
+            address = addressRaw?.replacingNewlineWithComma()
+        }
     }
 }

@@ -23,15 +23,14 @@
 		0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDB2D3F26EA00A37C15 /* Router.swift */; };
 		0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDD2D3F270600A37C15 /* RouteHandler.swift */; };
 		0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */; };
-		0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */; };
-		0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */; };
+		0B348CE22D3F2D9B00A37C15 /* MyTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B348CE12D3F2D9B00A37C15 /* MyTasksView.swift */; };
 		0B51A6712D451D2100E6CD8C /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51A6702D451D2100E6CD8C /* NotificationDelegate.swift */; };
-		0B5CAB6E2D44953900C93954 /* LocationManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */; };
+		0B5CAB6E2D44953900C93954 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CAB6D2D44953900C93954 /* LocationService.swift */; };
 		0B5CAB702D4498D500C93954 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5CAB6F2D4498D500C93954 /* TaskManager.swift */; };
 		0BB065242D432D62001D1B77 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB065232D432D62001D1B77 /* TaskRowView.swift */; };
-		0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB71F9B2D4084570054E85C /* LocationManager.swift */; };
+		0BB71F9C2D4084570054E85C /* MapSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB71F9B2D4084570054E85C /* MapSelectionViewModel.swift */; };
 		0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */; };
-		0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */; };
+		0BD2FC8F2D3EB55D005E07BF /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC8E2D3EB55D005E07BF /* AddTaskView.swift */; };
 		0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD2FC902D3EBA47005E07BF /* View+Extension.swift */; };
 		0BEA27072D473798009E7421 /* WhereAmIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA27062D473798009E7421 /* WhereAmIView.swift */; };
 		0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */; };
@@ -39,7 +38,7 @@
 		0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */; };
 		0BFDEF8F2D3D55E200ABF97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */; };
 		0BFDEF922D3D55E200ABF97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BFDEF912D3D55E200ABF97D /* Preview Assets.xcassets */; };
-		0BFDEF992D3D5D3C00ABF97D /* LocationRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */; };
+		0BFDEF992D3D5D3C00ABF97D /* WhereAmIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF982D3D5D3C00ABF97D /* WhereAmIViewModel.swift */; };
 		0BFDEF9B2D3D615500ABF97D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFDEF9A2D3D615500ABF97D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,15 +59,14 @@
 		0B348CDB2D3F26EA00A37C15 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		0B348CDD2D3F270600A37C15 /* RouteHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteHandler.swift; sourceTree = "<group>"; };
 		0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionView.swift; sourceTree = "<group>"; };
-		0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersView.swift; sourceTree = "<group>"; };
-		0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRoot.swift; sourceTree = "<group>"; };
+		0B348CE12D3F2D9B00A37C15 /* MyTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTasksView.swift; sourceTree = "<group>"; };
 		0B51A6702D451D2100E6CD8C /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
-		0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagerService.swift; sourceTree = "<group>"; };
+		0B5CAB6D2D44953900C93954 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0B5CAB6F2D4498D500C93954 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		0BB065232D432D62001D1B77 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
-		0BB71F9B2D4084570054E85C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0BB71F9B2D4084570054E85C /* MapSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectionViewModel.swift; sourceTree = "<group>"; };
 		0BD2FC8C2D3E8E94005E07BF /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
-		0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderView.swift; sourceTree = "<group>"; };
+		0BD2FC8E2D3EB55D005E07BF /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
 		0BD2FC902D3EBA47005E07BF /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		0BEA27062D473798009E7421 /* WhereAmIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmIView.swift; sourceTree = "<group>"; };
 		0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressView.swift; sourceTree = "<group>"; };
@@ -77,7 +75,7 @@
 		0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ami_koiApp.swift; sourceTree = "<group>"; };
 		0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0BFDEF912D3D55E200ABF97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRoot.swift; sourceTree = "<group>"; };
+		0BFDEF982D3D5D3C00ABF97D /* WhereAmIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhereAmIViewModel.swift; sourceTree = "<group>"; };
 		0BFDEF9A2D3D615500ABF97D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0BFDEF9C2D3D634F00ABF97D /* Ami-koi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Ami-koi-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -169,26 +167,100 @@
 		0B5CAB6C2D44952800C93954 /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				0B5CAB6D2D44953900C93954 /* LocationManagerService.swift */,
+				0B5CAB6D2D44953900C93954 /* LocationService.swift */,
 			);
 			path = Location;
 			sourceTree = "<group>";
 		};
-		0B66473B2D40C63400FB9C75 /* Views */ = {
+		0B66473B2D40C63400FB9C75 /* Fetchers */ = {
 			isa = PBXGroup;
 			children = (
-				0BFDEF9A2D3D615500ABF97D /* HomeView.swift */,
-				0BD2FC8E2D3EB55D005E07BF /* SetReminderView.swift */,
-				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
-				0B348CE12D3F2D9B00A37C15 /* RemindersView.swift */,
-				0BB065232D432D62001D1B77 /* TaskRowView.swift */,
-				0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */,
-				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
-				0BEA27062D473798009E7421 /* WhereAmIView.swift */,
-				0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */,
+				0BC2091F2D4B3EAB00772582 /* TaskSetup */,
+				0BC2091C2D4B3E2900772582 /* Tasks */,
+				0BC209192D4B3DE700772582 /* Home */,
+			);
+			path = Fetchers;
+			sourceTree = "<group>";
+		};
+		0BC209192D4B3DE700772582 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0BC2091B2D4B3DFC00772582 /* ViewModels */,
+				0BC2091A2D4B3DF200772582 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0BC2091A2D4B3DF200772582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				0B26DB8A2D4A4E3F0043CFA5 /* GreetingView.swift */,
+				0B26DB882D4A4DF60043CFA5 /* QuoteView.swift */,
+				0BFDEF9A2D3D615500ABF97D /* HomeView.swift */,
+				0BEA27062D473798009E7421 /* WhereAmIView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0BC2091B2D4B3DFC00772582 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0BFDEF982D3D5D3C00ABF97D /* WhereAmIViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0BC2091C2D4B3E2900772582 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				0BC2091E2D4B3E4C00772582 /* ViewModels */,
+				0BC2091D2D4B3E4500772582 /* Views */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		0BC2091D2D4B3E4500772582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BB065232D432D62001D1B77 /* TaskRowView.swift */,
+				0BED14CC2D46AEA7001ECB21 /* NoTaskView.swift */,
+				0B348CE12D3F2D9B00A37C15 /* MyTasksView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BC2091E2D4B3E4C00772582 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0BC2091F2D4B3EAB00772582 /* TaskSetup */ = {
+			isa = PBXGroup;
+			children = (
+				0BC209212D4B3ED000772582 /* ViewModels */,
+				0BC209202D4B3EC800772582 /* Views */,
+			);
+			path = TaskSetup;
+			sourceTree = "<group>";
+		};
+		0BC209202D4B3EC800772582 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B348CDF2D3F298700A37C15 /* MapSelectionView.swift */,
+				0BD2FC8E2D3EB55D005E07BF /* AddTaskView.swift */,
+				0BED14CA2D46AB75001ECB21 /* EditAddressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BC209212D4B3ED000772582 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0BB71F9B2D4084570054E85C /* MapSelectionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		0BD2FC8B2D3E8E41005E07BF /* Components */ = {
@@ -220,7 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				0B1715AA2D431D21001223F7 /* Services */,
-				0B66473B2D40C63400FB9C75 /* Views */,
+				0B66473B2D40C63400FB9C75 /* Fetchers */,
 				0B348CD82D3F25FB00A37C15 /* Router */,
 				0BD2FC8B2D3E8E41005E07BF /* Components */,
 				0B0732B82D3DE4C7008EAE7B /* Models */,
@@ -232,9 +304,6 @@
 				0BFDEF8A2D3D55E100ABF97D /* Ami_koiApp.swift */,
 				0BFDEF8E2D3D55E200ABF97D /* Assets.xcassets */,
 				0BFDEF902D3D55E200ABF97D /* Preview Content */,
-				0BFDEF982D3D5D3C00ABF97D /* LocationRoot.swift */,
-				0B348CE32D3F348C00A37C15 /* ReminderRoot.swift */,
-				0BB71F9B2D4084570054E85C /* LocationManager.swift */,
 			);
 			path = "Ami koi";
 			sourceTree = "<group>";
@@ -323,17 +392,16 @@
 				0B1645502D42A7A800BD1116 /* String+Extenssion.swift in Sources */,
 				0B1715A92D431CEF001223F7 /* AmiKoi.xcdatamodeld in Sources */,
 				0B348CE02D3F298700A37C15 /* MapSelectionView.swift in Sources */,
-				0BD2FC8F2D3EB55D005E07BF /* SetReminderView.swift in Sources */,
+				0BD2FC8F2D3EB55D005E07BF /* AddTaskView.swift in Sources */,
 				0B0732BA2D3DE4D7008EAE7B /* Quotes.swift in Sources */,
 				0B0732B12D3DD828008EAE7B /* LocationUtils.swift in Sources */,
-				0B348CE42D3F348C00A37C15 /* ReminderRoot.swift in Sources */,
 				0BEA27072D473798009E7421 /* WhereAmIView.swift in Sources */,
 				0B51A6712D451D2100E6CD8C /* NotificationDelegate.swift in Sources */,
 				0B348CDE2D3F270600A37C15 /* RouteHandler.swift in Sources */,
 				0B348CDA2D3F26DD00A37C15 /* Route.swift in Sources */,
 				0BFDEF9B2D3D615500ABF97D /* HomeView.swift in Sources */,
 				0B1E421C2D4123AD004B6FBD /* ArgEnum.swift in Sources */,
-				0BFDEF992D3D5D3C00ABF97D /* LocationRoot.swift in Sources */,
+				0BFDEF992D3D5D3C00ABF97D /* WhereAmIViewModel.swift in Sources */,
 				0BB065242D432D62001D1B77 /* TaskRowView.swift in Sources */,
 				0BFDEF8B2D3D55E100ABF97D /* Ami_koiApp.swift in Sources */,
 				0BD2FC8D2D3E8E94005E07BF /* GradientText.swift in Sources */,
@@ -341,13 +409,13 @@
 				0BED14CD2D46AEA7001ECB21 /* NoTaskView.swift in Sources */,
 				0BED14CB2D46AB75001ECB21 /* EditAddressView.swift in Sources */,
 				0B348CDC2D3F26EA00A37C15 /* Router.swift in Sources */,
-				0B348CE22D3F2D9B00A37C15 /* RemindersView.swift in Sources */,
+				0B348CE22D3F2D9B00A37C15 /* MyTasksView.swift in Sources */,
 				0B26DB8B2D4A4E3F0043CFA5 /* GreetingView.swift in Sources */,
 				0B0732AE2D3DD677008EAE7B /* CLPlacemark+Extension.swift in Sources */,
-				0B5CAB6E2D44953900C93954 /* LocationManagerService.swift in Sources */,
+				0B5CAB6E2D44953900C93954 /* LocationService.swift in Sources */,
 				0BD2FC912D3EBA47005E07BF /* View+Extension.swift in Sources */,
 				0B5CAB702D4498D500C93954 /* TaskManager.swift in Sources */,
-				0BB71F9C2D4084570054E85C /* LocationManager.swift in Sources */,
+				0BB71F9C2D4084570054E85C /* MapSelectionViewModel.swift in Sources */,
 				0B0732B42D3DE20F008EAE7B /* TimeOfDayGreetings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

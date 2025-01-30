@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-class LocationRoot : NSObject, ObservableObject, CLLocationManagerDelegate {
+class WhereAmIViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     private let locationManager = CLLocationManager()
     @Published var locationStatus : CLAuthorizationStatus?

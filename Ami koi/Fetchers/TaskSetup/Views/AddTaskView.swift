@@ -8,13 +8,13 @@
 import SwiftUI
 import CoreLocation
 
-struct SetReminderView: View {
+struct AddTaskView: View {
     @Environment(\.managedObjectContext) var context
     @EnvironmentObject private var router : Router
-    @EnvironmentObject private var locationManagerService : LocationManagerService
+    @EnvironmentObject private var lms : LocationService
     @State private var details : String = ""
     private var corneerRadious : CGFloat = 16
-    @StateObject var reminderRoot : ReminderRoot = ReminderRoot()
+     
     @State var location : CLLocation? = nil
     
     var body: some View {
@@ -33,7 +33,7 @@ struct SetReminderView: View {
                             }
                             .font(.title2)
                             
-                            Text( reminderRoot.address == nil ?  "No location added" : reminderRoot.address!)
+                            Text( lms.address == nil ?  "No location added" : lms.address!)
                                 .foregroundStyle(.primary.opacity(0.7))
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .multilineTextAlignment(.leading)
@@ -62,9 +62,9 @@ struct SetReminderView: View {
                         task.lat = location?.coordinate.latitude ?? 0
                         task.lon = location?.coordinate.longitude ?? 0
                         task.isComplite = false
-                        task.address = reminderRoot.address
+                        task.address = lms.address
                         try? context.save()
-                        locationManagerService.addGeofence(for: task)
+                        lms.addGeofence(for: task)
                         
                         
                     } label: {
@@ -84,7 +84,7 @@ struct SetReminderView: View {
         .fontDesign(.serif)
         .onChange(of: router.args[.location] as? CLLocation) { newValue in
             location = newValue
-            reminderRoot.fetchAddress(location: newValue!)
+            lms.fetchAddress(location: newValue!)
         }
         .onDisappear {
             if !router.isInStack(destination: Route.setReminderView) {
@@ -96,7 +96,7 @@ struct SetReminderView: View {
 }
 
 #Preview {
-    SetReminderView()
+    AddTaskView()
         .environmentObject(Router())
-        .environmentObject(LocationManagerService())
+        .environmentObject(LocationService())
 }

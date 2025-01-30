@@ -15,8 +15,8 @@ struct RouteHandler : View {
                 .navigationDestination(for: Route.self) { route in
                     switch route{
                     case .homeView : HomeView()
-                    case .reminderListView : RemindersView()
-                    case .setReminderView : SetReminderView()
+                    case .reminderListView : MyTasksView()
+                    case .setReminderView : AddTaskView()
                     case .mapSelectionView: MapSelectionView(){ location in }
                     }
                 }
