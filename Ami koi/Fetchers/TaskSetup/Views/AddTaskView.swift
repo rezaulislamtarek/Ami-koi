@@ -21,31 +21,8 @@ struct AddTaskView: View {
        
         VStack{
                 VStack {
-                   
-                    Button(action: {
-                        router.presentSheet(destination: Route.mapSelectionView)
-                    }, label: {
-                        VStack(alignment: .leading){
-                            HStack{
-                                Text("Pick a location")
-                                Spacer()
-                                Image(systemName: "hand.tap")
-                            }
-                            .font(.title2)
-                            
-                            Text( lms.address == nil ?  "No location added" : lms.address!)
-                                .foregroundStyle(.primary.opacity(0.7))
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .multilineTextAlignment(.leading)
-                                
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .foregroundStyle(.white)
-                        .padding()
-                        .gradientBackground([.green, .blue.opacity(0.5)])
-                    .cornerRadius(corneerRadious)
-                    })
-                    .tint(.primary)
+                   locationPickupButtonSection
+                    
                     
                     TextField("Whats should I tell you later?", text: $details)
                         .padding()
@@ -92,6 +69,35 @@ struct AddTaskView: View {
                 router.args[.location] = nil
             }
         }
+    }
+}
+
+extension AddTaskView{
+    private var locationPickupButtonSection : some View{
+        Button(action: {
+            router.presentSheet(destination: Route.mapSelectionView)
+        }, label: {
+            VStack(alignment: .leading){
+                HStack{
+                    Text("Pick a location")
+                    Spacer()
+                    Image(systemName: "hand.tap")
+                }
+                .font(.title2)
+                
+                Text( lms.address == nil ?  "No location added" : lms.address!)
+                    .foregroundStyle(.primary.opacity(0.7))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .multilineTextAlignment(.leading)
+                    
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .foregroundStyle(.white)
+            .padding()
+            .gradientBackground([.green, .blue.opacity(0.5)])
+        .cornerRadius(corneerRadious)
+        })
+        .tint(.primary)
     }
 }
 
